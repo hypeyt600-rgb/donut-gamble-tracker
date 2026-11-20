@@ -13,7 +13,9 @@ jobs:
         with:
           gradle-version: "8.12"
       - run: gradle build
+        working-directory: donut-gamble-tracker/donut-gamble-tracker
       - uses: actions/upload-artifact@v4
         with:
           name: donut-gamble-tracker
-          path: build/libs/*.jar
+          path: donut-gamble-tracker/donut-gamble-tracker/build/libs/*.jar
+          
